@@ -25,7 +25,7 @@ The data you have to send is:
 | `TIM2_CH1` | PA0 |Connect to X axis in **PUL** pins in the driver|
 | `TIM3_CH1` | PB4 |Connect to Y axis in **PUL** pins in the driver|
 | `TIM2_CH3` | PA2 |Connect to Z axis in **PUL** pins in the driver|
-| `SIG(X,Y,Z)` | PB7, PB1, PB9 |Connect to **END_STOP** at each axis|
+| `SIG(X,Y,Z)` | PB6, PB1, PB9 |Connect to **END_STOP** at each axis|
 | `USART1_RX` | PA10 |Connect to **TX** of module UART|
 | `USART1_RX` | PA9 |Connect to **RX** of module UART|
 | `RELAY_CONVEYOR(optional)` | PB14 |Connect to a **Relay** that connect to the Conveyor of system|
