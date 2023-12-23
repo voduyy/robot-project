@@ -77,7 +77,7 @@ void Error_Handler(void);
 #define RELAY_ABSORB_GPIO_Port GPIOB
 #define RELAY_CONVEYOR_Pin GPIO_PIN_14
 #define RELAY_CONVEYOR_GPIO_Port GPIOB
-#define SIGX_Pin GPIO_PIN_7
+#define SIGX_Pin GPIO_PIN_6
 #define SIGX_GPIO_Port GPIOB
 #define SIGX_EXTI_IRQn EXTI9_5_IRQn
 #define SIGZ_Pin GPIO_PIN_9
