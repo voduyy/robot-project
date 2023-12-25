@@ -141,7 +141,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 				HAL_TIM_PWM_Stop_IT(&htim2, TURN_CHANNEL);
 				doneT = 1;
 				count_timer++;
-				printf("Done turn around\r\n");
+				//printf("Done turn around\r\n");
 			}
 		}
 
@@ -233,6 +233,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 				HAL_TIM_PWM_Stop_IT(&htim2, Z_CHANNEL);
 				HAL_TIM_PWM_Start_IT(&htim2, TURN_CHANNEL);
 				printf("Mode: Turn Around\r\n");
+				doneT=0;
 				break;
 			case Stop_Conveyor_State:
 				HAL_GPIO_WritePin(GPIOB, RELAY_CONVEYOR_Pin, Off);
