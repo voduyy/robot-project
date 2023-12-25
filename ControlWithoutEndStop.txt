@@ -453,6 +453,7 @@ void RobotDoCommand() {
 		homeZ=1;
 		homeY=1;
 		homeX=1;
+		AtHome=0;
 		element++;
 		printf("Mode: Home\r\n");
 		isTaskDone = 0;
