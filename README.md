@@ -1,9 +1,10 @@
 # CONTROL ROBOT 3 AXIS WITH STM32
-In this project, we using STM32 for project, this project is mainly focus on move robot or stepper by generate pulse PWM through pins of STM32 when recieve value of UART completely. <br />
+In this project, we using STM32F103C8T6 for project, this project is mainly focus on moving robot with stepper by generating pulse PWM through pins of STM32 when recieve value of UART completely. <br />
       1. With version 1 the main purpose is for testing, if robot's running, UART won't read value and tramsmit to the monitor a string "Running... Don't receive value".  <br />
       2. With version 2, we can receive multiple data from UART and if we receive XYZ from UART, robot immediately changes mode to  run with saved instruction.
 You want to find a main.c -> go to Core/Src/main.c, open project is clicked .project to open the whole project, .ioc is a file config pin or peripheral.  <br />
 You need anything software that can read from COM of computer (Hercules,...).  <br />
+This project is in `Version 1.14.0`, if you have version below this version, please update. <br />
 # DETAIL PROJECT
 The data you have to send is: 
    - For XYZ: <br />
