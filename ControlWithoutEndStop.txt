@@ -28,25 +28,19 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-typedef struct Coordinate_Axis_X {
-	uint32_t step;
-	uint8_t direction :0x1;
-
-} Coordinate_X;
-typedef struct Coordinate_Axis_Y {
-	uint32_t step;
-	uint8_t direction :0x1;
-
-} Coordinate_Y;
-typedef struct Coordinate_Axis_Z {
-	uint32_t step;
-	uint8_t direction :0x1;
-
-} Coordinate_Z;
 typedef struct Robot {
-	Coordinate_X axisX;
-	Coordinate_Y axisY;
-	Coordinate_Z axisZ;
+	union {
+		uint32_t step :0x14;
+		uint8_t direction :0x1;
+	} axisX;
+	union {
+		uint32_t step :0x14;
+		uint8_t direction :0x1;
+	} axisY;
+	union {
+		uint32_t step :0x14;
+		uint8_t direction :0x1;
+	} axisZ;
 	uint8_t state :0x2;
 	uint8_t CommandState :0x4;
 } Robot;
