@@ -428,6 +428,9 @@ void CheckHome(void) {
 			AtHome = 1;
 			state_robot = wait_instruction;
 		}
+		HAL_TIM_PWM_Stop_IT(&htim2, X_CHANNEL);
+		HAL_TIM_PWM_Stop_IT(&htim3, Y_CHANNEL);
+		HAL_TIM_PWM_Stop_IT(&htim2, Z_CHANNEL);
 		ResetAllValue();
 		HAL_GPIO_WritePin(GPIOB, RELAY_CONVEYOR_Pin, On); // bat bang chuyen
 	}
