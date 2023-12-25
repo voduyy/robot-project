@@ -19,7 +19,9 @@ The data you have to send is:
           7. `Stop pick up--------------`  <br />
      -   As you can see, there're command for Robot to return home(stop by end_stop[SIGX,SIGY,SIGZ]), or turn around (for 4 axis, and the axis 4th only run 3200 step [which you can modify for each situation]), Stop, On/off conveyor.
 <br />
+
 # PIN CONFIGURATION
+
 |Label  |Pin | Description |
 | :--- | :--- | :---|
 | `DIR(X,Y,Z)` | PB0, PA5, PB10 |Connect with **Direction (DIR+/-)** in the driver|
