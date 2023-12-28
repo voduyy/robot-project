@@ -189,7 +189,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 			}
 		}
 	}
-	if ((count_timer == 3 && startRobot == 1)
+	if ((count_timer == 3 && startXYZ && startRobot == 1)
 			|| (count_timer == 1 && startCmd == 1)) {
 		if (startXYZ) {
 			startXYZ = 0;
