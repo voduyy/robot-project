@@ -158,7 +158,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 			}
 		}
 	}
-	if ((count_timer == 3 && startUart == 1)
+	if ((count_timer == 3 && startXYZ==1 && startUart == 1)
 			|| (count_timer == 1 && startCmd == 1)) {
 		startXYZ = 0;
 		pulX = 0;
