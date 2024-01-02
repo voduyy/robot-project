@@ -1,12 +1,13 @@
-# CONTROL ROBOT 3 AXIS WITH STM32
+# Control robot 3 axis with STM32
 In this project, we using STM32F103C8T6 for project, this project is mainly focus on moving robot with stepper by generating pulse PWM through pins of STM32 when recieve value of UART completely. <br />
-      <pre>-  With version 1 the main purpose is for testing, if robot's running, UART won't read value and tramsmit to the monitor a string "Running... Don't receive value".  <br />
+      <pre>
+      -  With version 1 the main purpose is for testing, if robot's running, UART won't read value and tramsmit to the monitor a string "Running... Don't receive value".  <br />
       -  With version 2, we can receive multiple data from UART and if we receive XYZ from UART, robot immediately changes mode to  run with saved instruction. <br />
       </pre>
-You want to find a main.c -> go to Core/Src/main.c, open project is clicked .project to open the whole project, .ioc is a file config pin or peripheral.  <br />
+## Requirement project ##
 You need anything software that can read data from COM of your computer (Hercules,PuTTY...).  <br />
 This project is in `Version 1.14.0`, if you have version below this version, please update. <br />
-# DETAIL PROJECT
+# Detail project
 The data you have to send is: 
    - For XYZ: <br />
             -   `X=XXXXXX,Y=XXXXXX,Z=XXXXXX` (first byte of each dim is direction if you send "-" Robot will change direction to CCW, vice versa).
@@ -22,7 +23,7 @@ The data you have to send is:
      -   As you can see, there're command for Robot to return home(stop by end_stop[SIGX,SIGY,SIGZ]), or turn around (for 4 axis, and the axis 4th only run 3200 step [which you can modify for each situation]), Stop, On/off conveyor.
 <br />
 
-# PIN CONFIGURATION
+# Pin configuration
 
 |Label  |Pin | Description |
 | :--- | :--- | :---|
@@ -37,3 +38,6 @@ The data you have to send is:
 | `RELAY_ROBOT(optional)`  | PA6 |Connect to a **Relay** that connect for pick up object|
 | `TIM2_CH2` | PA1 |Connect to 4th axis in **PUL** pins in the driver for suitable project|
 |`RELAY_ABSORB`| PB13|Connect to a **Relay** that connect for absord|
+
+# Where to find code
+You want to find a main.c -> go to Core/Src/main.c, open project is clicked .project to open the whole project, .ioc is a file config pin or peripheral.  <br />
