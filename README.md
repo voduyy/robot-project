@@ -24,7 +24,6 @@ The data you have to send is:
 <br />
 
 # Pin configuration
-
 |Label  |Pin | Description |
 | :--- | :--- | :---|
 | `DIR(X,Y,Z)` | PB0, PA5, PB10 |Connect with **Direction (DIR+/-)** in the driver|
