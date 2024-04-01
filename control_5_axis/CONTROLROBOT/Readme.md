@@ -1,6 +1,8 @@
 The data you have to send is: 
    - For coordinates: <br />
-            -   `B=XXXXXX,AX=XXXXXX,AY=XXXXXX,AZ=XXXXXX,AT=XXXXXX` (first byte of each dim is direction if you send "-" Robot axis will change direction to CCW, vice versa).
+            -   `B=XXXXXX,AX=XXXXXX,AY=XXXXXX,AZ=XXXXXX,AT=XXXXXX` <br />
+            - To change direction of each axis, you can put a character '-' after character '=' like this: <br />
+	    &nbsp; `B=-XXXXX,AX=-XXXXX,AY=-XXXXX,AZ=-XXXXX,AT=-XXXXX`
 # Pin configuration
 |Label  |Pin | Description |
 | :--- | :--- | :---|
