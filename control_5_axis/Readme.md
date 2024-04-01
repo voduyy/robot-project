@@ -1,7 +1,7 @@
 Frequency:  <br />
 	&nbsp;&nbsp;&nbsp;1. `Base,A4`: 4000 Hz <br />
  	&nbsp;&nbsp;&nbsp;2. `A2, A3`:  2000 Hz <br />
-  	&nbsp;&nbsp;&nbsp;3. `A1`: 1000 Hz <br />
+  	&nbsp;&nbsp;&nbsp;3. `A1`: 2000 Hz <br />
 The data you have to send is: 
    - For coordinates: <br />
             -   `B=XXXXXX,AX=XXXXXX,AY=XXXXXX,AZ=XXXXXX,AT=XXXXXX` <br />
