@@ -59,19 +59,17 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define DIRX_Pin GPIO_PIN_5
-#define DIRX_GPIO_Port GPIOC
+#define GRAB_OBJECT_Pin GPIO_PIN_14
+#define GRAB_OBJECT_GPIO_Port GPIOC
 #define DIRY_Pin GPIO_PIN_0
 #define DIRY_GPIO_Port GPIOB
-#define GRAB_OBJECT_Pin GPIO_PIN_15
-#define GRAB_OBJECT_GPIO_Port GPIOB
+#define DIRX_Pin GPIO_PIN_1
+#define DIRX_GPIO_Port GPIOB
 #define STATE_CONVEYOR_Pin GPIO_PIN_7
 #define STATE_CONVEYOR_GPIO_Port GPIOC
 #define SIG_STOP_CONVEYOR_Pin GPIO_PIN_5
 #define SIG_STOP_CONVEYOR_GPIO_Port GPIOB
 #define SIG_STOP_CONVEYOR_EXTI_IRQn EXTI9_5_IRQn
-#define ENABLE_Y_Pin GPIO_PIN_6
-#define ENABLE_Y_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

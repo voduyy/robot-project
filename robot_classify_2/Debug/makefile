@@ -52,6 +52,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 robot_classify_2.list \
 
+OBJCOPY_HEX += \
+robot_classify_2.hex \
+
 
 # All Target
 all: main-build
@@ -75,12 +78,17 @@ robot_classify_2.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS
 	@echo 'Finished building: $@'
 	@echo ' '
 
+robot_classify_2.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "robot_classify_2.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) default.size.stdout robot_classify_2.elf robot_classify_2.list robot_classify_2.map
+	-$(RM) default.size.stdout robot_classify_2.elf robot_classify_2.hex robot_classify_2.list robot_classify_2.map
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'
